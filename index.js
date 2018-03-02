@@ -88,7 +88,8 @@ export default class CheckBox extends Component {
         onPress={this.onPress}
         style={this.props.style}
         underlayColor='transparent'
-        disabled={this.props.disabled}>
+        disabled={this.props.disabled}
+        hitSlop={{ top: 12, left: 12, bottom: 12, right: 12 }}>
         <View style={styles.container}>
           {this.renderLeft()}
           {this.renderImage()}
