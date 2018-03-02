@@ -16,9 +16,7 @@ import {
   StyleSheet,
   ViewPropTypes,
   TouchableHighlight
-} from 'react-native';
-import PropTypes from 'prop-types'
-
+} from 'react-native'
 
 export default class CheckBox extends Component {
   constructor(props) {
@@ -58,7 +56,8 @@ export default class CheckBox extends Component {
 
   renderRight = () => {
     if (this.props.rightTextView)
-      return this.props.rightTextView;
+      return this.props.rightTextView
+
     if (!this.props.rightText)
       return null
 
@@ -109,7 +108,7 @@ CheckBox.defaultProps = {
 
 CheckBox.propTypes = {
   ...(ViewPropTypes || View.PropTypes),
-  onClick: PropTypes.func,
+  onPress: PropTypes.func,
   disabled: PropTypes.bool,
   leftText: PropTypes.string,
   rightText: PropTypes.string,
